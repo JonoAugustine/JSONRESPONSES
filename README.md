@@ -1,4 +1,3 @@
-
 ## Get Strategies
 - URL : ``/api/strategies``
  - Method : ``GET``
@@ -6,7 +5,7 @@
  - Data Params
  - Success Response
 	 - Code : 200
-	 - Content : JSON containing strategy names & params
+	 - Content
  ```json
 [
   {
@@ -134,9 +133,9 @@
 
 ## Get Imports
 - URL
-- ``/api/imports``
+ ``/api/imports``
  - Method
- - ``GET``
+ ``GET``
  - URL Params
  none
  - Data Params
@@ -217,61 +216,67 @@ none
   ``router.get('/api/gekkos', listWraper('gekkos'));``
 
 
-## Title
+## Get Exchanges
 - URL
+``/api/exhanges``
  - Method
+ ``GET``
  - URL Params
-	 - Required
-	 - Optional
+ none
  - Data Params
+ none
  - Success Response
 	 - Code : 200
-	 - Content (JSON)
+	 - Content :  <em>See file : GetExchanges.md</em>
  - Error Response
-	 - Code
-	 - Content
+ none
  - Sample Call
- - Notes
+	``router.get('/api/exchanges', require('local/dir/exchanges')));``
 
-router.get('/api/exchanges', require(ROUTE('exchanges')));
-
-## Title
+## ADD API Key
 - URL
+``/api/addApiKey``
  - Method
+``POST``
  - URL Params
 	 - Required
-	 - Optional
+	 - Optional none
  - Data Params
+ none
  - Success Response
 	 - Code : 200
-	 - Content (JSON)
+	 - Content 
+```json 
+	 {"status":"ok"}
+```
  - Error Response
-	 - Code
-	 - Content
+	 - Code : 405
+	 - Content 
+	 `` 'Method Not Allowed' ``
  - Sample Call
- - Notes
+ ``router.post('/api/addApiKey', apiKeys.add);``
 
-router.post('/api/addApiKey', apiKeys.add);
-
-## Title
+## Remove API Key
 - URL
+``/api/removeApiKey``
  - Method
+ ``POST``
  - URL Params
-	 - Required
-	 - Optional
+ none
  - Data Params
+ none
  - Success Response
 	 - Code : 200
-	 - Content (JSON)
- - Error Response
-	 - Code
 	 - Content
+```json 
+	 {"status":"ok"}
+```
+ - Error Response
+ none
  - Sample Call
- - Notes
+	``router.post('/api/removeApiKey', apiKeys.remove);``
 
-router.post('/api/removeApiKey', apiKeys.remove);
-
-## Title
+## Start a Scan
 - URL
  - Method
  - URL Params
