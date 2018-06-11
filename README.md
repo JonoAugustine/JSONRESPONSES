@@ -1,3 +1,4 @@
+
 ## Get Strategies
 - URL : ``/api/strategies``
  - Method : ``GET``
