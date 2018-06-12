@@ -647,50 +647,55 @@ none</li>
 </ul>
 <pre><code class="language-json">[
   {
-    "watch": {
-      "exchange": "gdax",
-      "currency": "USD",
-      "asset": "LTC"
-    },
-    "id": "249270745859179",
-    "startAt": "2018-06-11T01:01:56Z",
-    "latest": "2018-06-11T22:47:02Z",
-    "mode": "realtime",
-    "type": "watcher",
-    "firstCandle": {
-      "start": "2018-06-11T01:01:00.000Z",
-      "open": 104.78,
-      "high": 104.78,
-      "low": 104.75,
-      "close": 104.75,
-      "vwp": 104.7664932330549,
-      "volume": 18.18927793,
-      "trades": 2
-    },
-    "lastCandle": {
-      "start": "2018-06-11T22:46:00.000Z",
-      "open": 105.54,
-      "high": 105.67,
-      "low": 105.51,
-      "close": 105.67,
-      "vwp": 105.64127875100343,
-      "volume": 46.216300000000004,
-      "trades": 24
-    }
-  },
-`` - Error Response
-     - Code : 404
-     - Content : `` `Not Found` ``
- - Sample Call
-```javascript
-$.ajax({ 
-    url: "/api/gekkos",
-    dataType: "json",
-    type : "GET",
-    success : require('web/routes/list')('gekkos')
+    "<span class="hljs-attribute">watch</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">exchange</span>": <span class="hljs-value"><span class="hljs-string">"gdax"</span></span>,
+      "<span class="hljs-attribute">currency</span>": <span class="hljs-value"><span class="hljs-string">"USD"</span></span>,
+      "<span class="hljs-attribute">asset</span>": <span class="hljs-value"><span class="hljs-string">"LTC"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"249270745859179"</span></span>,
+    "<span class="hljs-attribute">startAt</span>": <span class="hljs-value"><span class="hljs-string">"2018-06-11T01:01:56Z"</span></span>,
+    "<span class="hljs-attribute">latest</span>": <span class="hljs-value"><span class="hljs-string">"2018-06-11T22:47:02Z"</span></span>,
+    "<span class="hljs-attribute">mode</span>": <span class="hljs-value"><span class="hljs-string">"realtime"</span></span>,
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"watcher"</span></span>,
+    "<span class="hljs-attribute">firstCandle</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">start</span>": <span class="hljs-value"><span class="hljs-string">"2018-06-11T01:01:00.000Z"</span></span>,
+      "<span class="hljs-attribute">open</span>": <span class="hljs-value"><span class="hljs-number">104.78</span></span>,
+      "<span class="hljs-attribute">high</span>": <span class="hljs-value"><span class="hljs-number">104.78</span></span>,
+      "<span class="hljs-attribute">low</span>": <span class="hljs-value"><span class="hljs-number">104.75</span></span>,
+      "<span class="hljs-attribute">close</span>": <span class="hljs-value"><span class="hljs-number">104.75</span></span>,
+      "<span class="hljs-attribute">vwp</span>": <span class="hljs-value"><span class="hljs-number">104.7664932330549</span></span>,
+      "<span class="hljs-attribute">volume</span>": <span class="hljs-value"><span class="hljs-number">18.18927793</span></span>,
+      "<span class="hljs-attribute">trades</span>": <span class="hljs-value"><span class="hljs-number">2</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">lastCandle</span>": <span class="hljs-value">{
+      "<span class="hljs-attribute">start</span>": <span class="hljs-value"><span class="hljs-string">"2018-06-11T22:46:00.000Z"</span></span>,
+      "<span class="hljs-attribute">open</span>": <span class="hljs-value"><span class="hljs-number">105.54</span></span>,
+      "<span class="hljs-attribute">high</span>": <span class="hljs-value"><span class="hljs-number">105.67</span></span>,
+      "<span class="hljs-attribute">low</span>": <span class="hljs-value"><span class="hljs-number">105.51</span></span>,
+      "<span class="hljs-attribute">close</span>": <span class="hljs-value"><span class="hljs-number">105.67</span></span>,
+      "<span class="hljs-attribute">vwp</span>": <span class="hljs-value"><span class="hljs-number">105.64127875100343</span></span>,
+      "<span class="hljs-attribute">volume</span>": <span class="hljs-value"><span class="hljs-number">46.216300000000004</span></span>,
+      "<span class="hljs-attribute">trades</span>": <span class="hljs-value"><span class="hljs-number">24</span>
+    </span>}
+  </span>},
+</code></pre>
+<ul>
+<li>Error Response
+<ul>
+<li>Code : 404</li>
+<li>Content : <code>`Not Found`</code></li>
+</ul>
+</li>
+<li>Sample Call</li>
+</ul>
+<pre><code class="language-javascript">$.ajax({ 
+    url: <span class="hljs-string">"/api/gekkos"</span>,
+    dataType: <span class="hljs-string">"json"</span>,
+    type : <span class="hljs-string">"GET"</span>,
+    success : <span class="hljs-built_in">require</span>(<span class="hljs-string">'web/routes/list'</span>)(<span class="hljs-string">'gekkos'</span>)
 });
 </code></pre>
-<h2><a id="Kill_Stop_a_Gekko_bot_587"></a>Kill (Stop) a Gekko bot</h2>
+<h2><a id="Kill_Stop_a_Gekko_bot_588"></a>Kill (Stop) a Gekko bot</h2>
 <ul>
 <li>URL<br>
 <code>/api/killGekko</code></li>
@@ -725,7 +730,7 @@ $.ajax({
 </ul>
 </li>
 </ul>
-<h2><a id="Get_Candles_611"></a>Get Candles</h2>
+<h2><a id="Get_Candles_612"></a>Get Candles</h2>
 <ul>
 <li>URL<br>
 <code>l/api/getCandles</code></li>

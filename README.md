@@ -572,7 +572,8 @@ none
       "trades": 24
     }
   },
-`` - Error Response
+```
+- Error Response
 	 - Code : 404
 	 - Content : `` `Not Found` ``
  - Sample Call
